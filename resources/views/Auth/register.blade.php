@@ -35,11 +35,11 @@
             <h1>Register</h1>
             <form>
                 <div class="">
-                    <input type="text" placeholder="Username" name="uname">
+                    <input class = "inp-auth" type="text" placeholder="Username" name="uname">
 
-                    <input type="email" placeholder="Email" name="email">
+                    <input class = "inp-auth" type="email" placeholder="Email" name="email">
 
-                    <input type="password" placeholder="Password" name="psw">
+                    <input class = "inp-auth" type="password" placeholder="Password" name="psw">
 
                     <button class="btn-sbmt" type="submit">
                         Lanjutkan <span class="arrow-rgt">></span>
