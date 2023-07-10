@@ -128,7 +128,7 @@
     </div>
     <!-- FOOTER -->
     @include('navbar.footer')
-    <!-- END FOOTER -->
+    <!-- END FOOTER --> 
 
 </body>
 
