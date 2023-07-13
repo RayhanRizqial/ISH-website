@@ -33,11 +33,12 @@
         </div>
         <div class="right-section">
             <h1>Sign In</h1>
-            <form>
+            <form action="Login" method="POST">
+            @csrf
                 <div class="">
-                    <input class="inp-auth" type="text" placeholder="Username" name="uname">
+                    <input class="inp-auth" type="text" placeholder="Username" name="username">
 
-                    <input class="inp-auth" type="password" placeholder="Password" name="psw">
+                    <input class="inp-auth" type="password" placeholder="Password" name="password">
 
                     <button class="btn-sbmt" type="submit">
                         Lanjutkan <span class="arrow-lgn">></span>
@@ -47,7 +48,7 @@
             </form>
             <div class="btn-oth1" style="padding: 0px">
                 <a href="/Register"><button style="background-color: #646464c0;padding: 10px;" class="btn-oth">Register</button></a>
-                <a href=""><button style="background-color: #51739B" class="btn-oth"><i style="font-size: 24px" class="fa-brands fa-google"></i></button></a>
+                <a href=""><button style="background-color: #51739B" class="btn-oth" href="{{ route('auth.google') }}"><i style="font-size: 24px" class="fa-brands fa-google"></i></button></a>
             </div>
         </div>
     </div>

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SessionController;
+use App\Http\Controllers\GoogleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,6 +14,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::post('/Login', [SessionController::class, 'login'])->name('login');
+Route::get('/Login', [SessionController::class, 'index']);
+Route::post('/logout', [SessionController::class, 'logout']);
+Route::post('/Register', [SessionController::class, 'Register']);
+
+Route::prefix('auth/google')->group(function () {
+    Route::get('/', [GoogleController::class, 'redirectToGoogle'])->name('auth.google');
+    Route::get('/callback', [GoogleController::class, 'handleGoogleCallback']);
+});
 
 Route::get('/', function () {
     return view('landingPage');
